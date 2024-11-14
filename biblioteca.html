@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Personal</title>
+    <link rel="stylesheet" href="estilos/pagina5.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Personal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil Personal</a></li>
+                <li><a href="portafolio.html">Portafolio de Imágenes</a></li>
+                <li><a href="blog.html">Blog Personal</a></li>
+                <li><a href="proyectos.html">Proyectos Interactivos</a></li>
+                <li><a href="biblioteca.html">Biblioteca Personal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Biblioteca Personal</h1>
+            <ol>
+                <li>
+                    <h2 onclick="toggleDetails(this)">Don Quijote de la Mancha</h2>
+                    <div class="book-details">
+                        <img src="imagenes/don_quijote.jpg" alt="Don Quijote de la Mancha">
+                        <p class="synopsis">Don Quijote de la Mancha es una novela escrita por Miguel de Cervantes. La historia sigue las aventuras de un hidalgo que, influenciado por los libros de caballería, decide convertirse en caballero andante y salir en busca de aventuras junto a su fiel escudero, Sancho Panza.</p>
+                    </div>
+                </li>
+                <li>
+                    <h2 onclick="toggleDetails(this)">Cien Años de Soledad</h2>
+                    <div class="book-details">
+                        <img src="imagenes/cien_anos_de_soledad.jpg" alt="Cien Años de Soledad">
+                        <p class="synopsis">Cien Años de Soledad es una novela escrita por Gabriel García Márquez. La obra narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo, explorando temas como la soledad, el amor y la muerte.</p>
+                    </div>
+                </li>
+                <li>
+                    <h2 onclick="toggleDetails(this)">Orgullo y Prejuicio</h2>
+                    <div class="book-details">
+                        <img src="imagenes/orgullo_y_prejuicio.jpg" alt="Orgullo y Prejuicio">
+                        <p class="synopsis">Orgullo y Prejuicio es una novela escrita por Jane Austen. La historia sigue la vida de Elizabeth Bennet, una joven inteligente y vivaz, y su relación con el orgulloso y reservado Sr. Darcy, explorando temas como el matrimonio, la moralidad y la educación.</p>
+                    </div>
+                </li>
+                <li>
+                    <h2 onclick="toggleDetails(this)">1984</h2>
+                    <div class="book-details">
+                        <img src="imagenes/1984.jpg" alt="1984">
+                        <p class="synopsis">1984 es una novela escrita por George Orwell. La obra describe una sociedad distópica controlada por un régimen totalitario que utiliza la vigilancia, la propaganda y la represión para mantener el poder, explorando temas como la libertad, la verdad y la resistencia.</p>
+                    </div>
+                </li>
+                <li>
+                    <h2 onclick="toggleDetails(this)">El Principito</h2>
+                    <div class="book-details">
+                        <img src="imagenes/el_principito.jpg" alt="El Principito">
+                        <p class="synopsis">El Principito es una novela escrita por Antoine de Saint-Exupéry. La historia sigue a un joven príncipe que viaja de planeta en planeta, encontrando personajes peculiares y aprendiendo valiosas lecciones sobre la vida, el amor y la amistad.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <p>Ricardo Cano - <span id="fecha"></span></p>
+    </footer>
+    <script>
+        document.getElementById('fecha').textContent = new Date().toLocaleDateString();
+
+        function toggleDetails(element) {
+            const details = element.nextElementSibling;
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+                const synopsis = details.querySelector('.synopsis');
+                typeWriter(synopsis);
+            }
+        }
+
+        function typeWriter(element) {
+            const text = element.textContent;
+            element.textContent = '';
+            let i = 0;
+            function typing() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typing, 50);
+                }
+            }
+            typing();
+        }
+    </script>
+</body>
+</html>

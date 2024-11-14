@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Personal</title>
+    <link rel="stylesheet" href="estilos/pagina1.css">
+</head>
+<body>
+    <header>
+        <h1>Perfil Personal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil Personal</a></li>
+                <li><a href="portafolio.html">Portafolio de Imágenes</a></li>
+                <li><a href="blog.html">Blog Personal</a></li>
+                <li><a href="proyectos.html">Proyectos Interactivos</a></li>
+                <li><a href="biblioteca.html">Biblioteca Personal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <div class="bio-card">
+                <h1>Biografía</h1>
+                <p>
+                    Mi nombre es Ricardo Cano, tengo 21 años y actualmente estudio Ingeniería Informática en la Universidad Nihon Gakko. Desde muy joven, he tenido una gran pasión por la tecnología y la informática, lo que me llevó a elegir esta carrera. A lo largo de mi vida académica, he desarrollado habilidades en diversas áreas de la informática, incluyendo programación, desarrollo web, bases de datos y redes.
+                </p>
+                <p>
+                    Mi objetivo a largo plazo es convertirme en un desarrollador de software altamente competente y contribuir al desarrollo de soluciones tecnológicas innovadoras que puedan mejorar la vida de las personas. Estoy comprometido con mi crecimiento profesional y siempre estoy buscando nuevas oportunidades para aprender y crecer en mi campo.
+                </p>
+                <p>
+                    Estoy emocionado por lo que el futuro me depara y estoy seguro de que mi pasión por la tecnología y mi dedicación a la excelencia me llevarán a alcanzar mis metas profesionales.
+                </p>
+            </div>
+            <div class="skills-card">
+                <h2>Habilidades</h2>
+                <table>
+                    <tr>
+                        <th>Habilidad</th>
+                        <th>Nivel</th>
+                    </tr>
+                    <tr>
+                        <td>Programación en Java</td>
+                        <td>Avanzado</td>
+                    </tr>
+                    <tr>
+                        <td>Desarrollo Web (HTML, CSS, JavaScript)</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>Bases de Datos (SQL)</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>Redes y Seguridad</td>
+                        <td>Básico</td>
+                    </tr>
+                    <tr>
+                        <td>Administración de Sistemas</td>
+                        <td>Intermedio</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contacto</h2>
+            <a href="https://www.linkedin.com/in/ricardojosecanocenturion/" class="icon linkedin">
+                <img src="https://static.vecteezy.com/system/resources/previews/018/930/480/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/ricardocano06" class="icon twitter">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/042/148/611/small/new-twitter-x-logo-twitter-icon-x-social-media-icon-free-png.png" alt="X">
+            </a>
+            <a href="curriculum.pdf" class="icon pdf">
+                <img src="https://w7.pngwing.com/pngs/719/77/png-transparent-curriculum-vitae-job-hunting-resume-employment-cv-text-rectangle-resume-thumbnail.png" alt="Currículum">
+            </a>
+        </section>
+    </main>
+    <footer>
+        <p>Ricardo Cano - <span id="fecha"></span></p>
+    </footer>
+    <script>
+        document.getElementById('fecha').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

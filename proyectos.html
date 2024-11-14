@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Interactivos</title>
+    <link rel="stylesheet" href="estilos/pagina4.css">
+</head>
+<body>
+    <header>
+        <h1>Proyectos Interactivos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil Personal</a></li>
+                <li><a href="portafolio.html">Portafolio de Imágenes</a></li>
+                <li><a href="blog.html">Blog Personal</a></li>
+                <li><a href="proyectos.html">Proyectos Interactivos</a></li>
+                <li><a href="biblioteca.html">Biblioteca Personal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="carousel-container">
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-item">
+                            <h2>Proyecto de Aplicación Web</h2>
+                            <img src="imagenes/proyecto1.jpg" alt="Proyecto de Aplicación Web">
+                            <div class="overlay">
+                                <p>Interfaz de usuario de una aplicación web desarrollada para la gestión de eventos universitarios. La aplicación permite a los usuarios crear, gestionar y asistir a eventos de manera eficiente.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>Proyecto de Sistema de Inventario</h2>
+                            <img src="imagenes/proyecto2.png" alt="Proyecto de Sistema de Inventario">
+                            <div class="overlay">
+                                <p>Diagrama de flujo del sistema de inventario desarrollado para una pequeña empresa. El sistema permite gestionar el stock de productos, realizar pedidos y generar informes de inventario.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>Proyecto de Análisis de Datos</h2>
+                            <img src="imagenes/proyecto3.jpg" alt="Proyecto de Análisis de Datos">
+                            <div class="overlay">
+                                <p>Gráfico de visualización de datos generado utilizando herramientas de análisis de datos. El proyecto analiza tendencias y patrones en un conjunto de datos de ventas.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>Proyecto de Red Segura</h2>
+                            <img src="imagenes/proyecto4.png" alt="Proyecto de Red Segura">
+                            <div class="overlay">
+                                <p>Diagrama de red mostrando la configuración de una red segura para una pequeña empresa. El proyecto incluye la implementación de firewalls, VPN y medidas de seguridad avanzadas.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>Proyecto de Aplicación Móvil</h2>
+                            <img src="imagenes/proyecto5.jpg" alt="Proyecto de Aplicación Móvil">
+                            <div class="overlay">
+                                <p>Interfaz de usuario de una aplicación móvil desarrollada para la gestión de tareas. La aplicación permite a los usuarios crear, editar y completar tareas de manera eficiente.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>Proyecto de E-commerce</h2>
+                            <img src="imagenes/proyecto6.jpg" alt="Proyecto de E-commerce">
+                            <div class="overlay">
+                                <p>Página principal de un sitio web de comercio electrónico desarrollado para una tienda en línea. El sitio permite a los usuarios navegar por productos, realizar compras y gestionar sus pedidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+            <ul class="technologies">
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>SQL</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Ricardo Cano - <span id="fecha"></span></p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+
+        function showSlides(n) {
+            slideIndex = (n + totalSlides) % totalSlides;
+            const track = document.querySelector('.carousel-track');
+            track.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex + n);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlides(slideIndex);
+            document.getElementById('fecha').textContent = new Date().toLocaleDateString();
+        });
+    </script>
+</body>
+</html>

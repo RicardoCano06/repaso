@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Personal</title>
+    <link rel="stylesheet" href="estilos/pagina3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil Personal</a></li>
+                <li><a href="portafolio.html">Portafolio de Imágenes</a></li>
+                <li><a href="blog.html">Blog Personal</a></li>
+                <li><a href="proyectos.html">Proyectos Interactivos</a></li>
+                <li><a href="biblioteca.html">Biblioteca Personal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Blog Personal</h1>
+            <article class="article">
+                <h2>La Revolución de la Inteligencia Artificial en la Medicina</h2>
+                <img src="imagenes/iamedicina.jpg" alt="Inteligencia Artificial en la Medicina">
+                <p>La inteligencia artificial (IA) está transformando la medicina de maneras inimaginables. Desde diagnósticos más precisos hasta tratamientos personalizados, la IA está revolucionando la forma en que los médicos abordan el cuidado de la salud. En este artículo, exploramos cómo la IA está siendo utilizada en la medicina moderna y los beneficios que trae consigo.</p>
+                <button onclick="location.href='https://saludbydiaz.com/2024/08/25/la-revolucion-de-la-inteligencia-artificial-en-medicina-impacto-y-proyecciones-futuras/'">Leer más</button>
+            </article>
+            <article class="article">
+                <h2>El Impacto del Desarrollo Web en la Era Digital</h2>
+                <img src="imagenes/desarrolloweb.jpg" alt="Desarrollo Web">
+                <p>El desarrollo web ha cambiado drásticamente la forma en que interactuamos con la tecnología. Desde la creación de sitios web dinámicos hasta aplicaciones web interactivas, los desarrolladores web están en el corazón de la era digital. En este artículo, discutimos las tendencias actuales en el desarrollo web y cómo están moldeando el futuro de la tecnología.</p>
+                <button onclick="location.href='https://agenciadesarrolloweb.cl/la-era-digital-y-su-impacto-en-el-desarrollo-web/'">Leer más</button>
+            </article>
+            <article class="article">
+                <h2>La Importancia de la Seguridad en Redes en el Mundo Actual</h2>
+                <img src="imagenes/seguridad.jpg" alt="Seguridad en Redes">
+                <p>En un mundo cada vez más conectado, la seguridad en redes se ha convertido en una prioridad absoluta. Desde la protección de datos personales hasta la defensa contra ciberataques, la seguridad en redes es esencial para mantener la integridad y la privacidad de la información. En este artículo, exploramos las mejores prácticas y tecnologías para asegurar las redes en el mundo actual.</p>
+                <button onclick="location.href='https://www.dacmosgroup.com/la-importancia-de-la-seguridad-de-redes-en-un-mundo-conectado#:~:text=La%20seguridad%20de%20redes%20es%20esencial%20para%20proteger%20nuestros%20datos,con%20medidas%20de%20seguridad%20adecuadas.'">Leer más</button>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Ricardo Cano - <span id="fecha"></span></p>
+    </footer>
+    <script>
+        document.getElementById('fecha').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

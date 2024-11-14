@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Imágenes</title>
+    <link rel="stylesheet" href="estilos/pagina2.css">
+</head>
+<body>
+    <header>
+        <h1>Portafolio de Imágenes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil Personal</a></li>
+                <li><a href="portafolio.html">Portafolio de Imágenes</a></li>
+                <li><a href="blog.html">Blog Personal</a></li>
+                <li><a href="proyectos.html">Proyectos Interactivos</a></li>
+                <li><a href="biblioteca.html">Biblioteca Personal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery">
+            <div class="image-container">
+                <img src="imagenes/iu.jpg" alt="Interfaz de Usuario">
+                <div class="overlay">
+                    <h2>Interfaz de Usuario</h2>
+                    <p>Interfaz de usuario de una aplicación web desarrollada para la gestión de eventos universitarios.</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="imagenes/java.jpg" alt="Código Java">
+                <div class="overlay">
+                    <h2>Código Java</h2>
+                    <p>Fragmento de código en Java mostrando la lógica de una función compleja.</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="imagenes/erd.jpg" alt="Diagrama ERD">
+                <div class="overlay">
+                    <h2>Diagrama ERD</h2>
+                    <p>Diagrama de entidad-relación (ERD) de una base de datos diseñada para un proyecto de comercio electrónico.</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="imagenes/red.JPG" alt="Configuración de Red">
+                <div class="overlay">
+                    <h2>Configuración de Red</h2>
+                    <p>Diagrama de red mostrando la configuración de una red segura para una pequeña empresa.</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="imagenes/certificado.jpg" alt="Certificación">
+                <div class="overlay">
+                    <h2>Certificación</h2>
+                    <p>Certificado de finalización de un curso avanzado de desarrollo web.</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="imagenes/datos.jpg" alt="Visualización de Datos">
+                <div class="overlay">
+                    <h2>Visualización de Datos</h2>
+                    <p>Gráfico generado utilizando herramientas de análisis de datos para un proyecto de investigación.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Ricardo Cano - <span id="fecha"></span></p>
+    </footer>
+    <script>
+        document.getElementById('fecha').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
